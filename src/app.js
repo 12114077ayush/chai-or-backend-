@@ -19,9 +19,10 @@ app.use(cookieParser()); //to perform CRED operations in user browser.
 
 //routes import
 import userRouter from "./routes/user.routes.js";
-
+import videoRouter from "./routes/video.routes.js";
 //routes declaration
 //(here we have used ".use" middleware instead of ".get" as earlier we were writting all the routes and controller within the same file. whenever we type /users then control goes to userRouter)
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/videos", videoRouter);
 
 export { app };

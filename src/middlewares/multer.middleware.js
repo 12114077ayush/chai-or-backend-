@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     // const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    //laster on try to alter these some above changes
+    //laster on we will try to alter these some above changes
     cb(null, file.originalname);
   },
 });
