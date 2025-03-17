@@ -17,4 +17,11 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); // here we confi
 app.use(express.static("public")); // we config to store file,pdf or images into public folder.
 app.use(cookieParser()); //to perform CRED operations in user browser.
 
+//routes import
+import userRouter from "./routes/user.routes.js";
+
+//routes declaration
+//(here we have used ".use" middleware instead of ".get" as earlier we were writting all the routes and controller within the same file. whenever we type /users then control goes to userRouter)
+app.use("/api/v1/users", userRouter);
+
 export { app };
